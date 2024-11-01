@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voces en Frecuencia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabecera Fija -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Botón de menú para dispositivos móviles -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- Lista de navegación -->
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#otros-proyectos">Otros Proyectos</a></li>
+                <li><a href="#contactanos">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrusel de Imágenes -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="./imagen/VEF.jpg" alt="Imagen 1">
+                <div class="overlay">
+                    <div class="container">
+                        <h1 class="title animated-text">Voces en <br> Frecuencia</h1>
+                        <h2 class="subtitle animated-text">Lenguaje Sonoro</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./imagen/presentacion.png" alt="Imagen 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="./imagen/frase.png" alt="Imagen 3">
+            </div>
+        </div>
+        <button class="prev-btn">&lt; Anterior</button>
+        <button class="next-btn">Siguiente &gt;</button>
+
+    </section>
+
+
+
+    <!-- Sección Cultura y Sociedad -->
+    <section class="cultura-sociedad">
+        <h2>Cultura y Sociedad</h2>
+        <div class="slider-container">
+            <button class="slider-button left" onclick="slideLeft('cardSlider1')">&#10094;</button>
+            <div class="card-slider" id="cardSlider1"></div>
+            <button class="slider-button right" onclick="slideRight('cardSlider1')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Sección Educación e Información -->
+    <section class="educacion-informacion">
+        <h2>Educación e Información</h2>
+        <div class="slider-container">
+            <button class="slider-button left" onclick="slideLeft('cardSlider2')">&#10094;</button>
+            <div class="card-slider" id="cardSlider2"></div>
+            <button class="slider-button right" onclick="slideRight('cardSlider2')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Sección Entretenimiento y Arte -->
+    <section class="entretenimiento-arte">
+        <h2>Entretenimiento y Arte</h2>
+        <div class="slider-container">
+            <button class="slider-button left" onclick="slideLeft('cardSlider3')">&#10094;</button>
+            <div class="card-slider" id="cardSlider3"></div>
+            <button class="slider-button right" onclick="slideRight('cardSlider3')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Sección Entrevistas y Testimonios -->
+    <section class="entrevistas-testimonios">
+        <h2>Entrevistas y Testimonios</h2>
+        <div class="slider-container">
+            <button class="slider-button left" onclick="slideLeft('cardSlider4')">&#10094;</button>
+            <div class="card-slider" id="cardSlider4"></div>
+            <button class="slider-button right" onclick="slideRight('cardSlider4')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Sección Actualidad -->
+    <section class="actualidad">
+        <h2>Actualidad</h2>
+        <div class="slider-container">
+            <button class="slider-button left" onclick="slideLeft('cardSlider5')">&#10094;</button>
+            <div class="card-slider" id="cardSlider5"></div>
+            <button class="slider-button right" onclick="slideRight('cardSlider5')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Frase -->
+    <section class="frase">
+        <p>"EL PODER DE LA VOCES PUEDE CAMBIAR EL MUNDO, UNA HISTORIA A LA VEZ"</p>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="footer-container">
+            <div class="contact-box">
+                <h3>Mantente en contacto</h3>
+                <hr>
+                <p>Correo Electrónico:</p>
+                <input type="email" placeholder="Introduce tu correo" />
+
+                <div class="checkbox-container"
+                    style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center;">
+                        <input type="checkbox" id="subscribe">
+                        <label for="subscribe">Sí, escríbeme a tu boletín</label>
+                    </div>
+                    <button type="submit" class="register-btn">Regístrate</button>
+                </div>
+                <hr>
+
+                <!-- Columnas -->
+                <div class="contact-columns">
+                    <div class="column">Diseñado por Aylen Blanco</div>
+                    <div class="column">vocesenfrecuencia36@gmail.com</div>
+                    <div class="column"><a href="#">Terms and Conditions</a></div>
+                </div>
+
+                <!-- Botones -->
+                <div class="footer-buttons">
+                    <a href=""></a><button class="footer-button">INSTAGRAM</a>
+                    <a href=""></a><button class="footer-button">X</a>
+                    <a href=""></a><button class="footer-button">FACEBOOK</a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="footer-credits">&copy;2024 Voces en Frecuencia. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
