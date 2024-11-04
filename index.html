@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Voces en Frecuencia</title>
+    <title>Voces En Frecuencia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Cabecera Fija -->
-    <header class="header">
+    
+     <!-- Cabecera Fija -->
+     <header class="header">
         <nav class="navbar">
             <!-- Botón de menú para dispositivos móviles -->
             <div class="menu-toggle" id="mobile-menu">
@@ -30,88 +28,309 @@
         </nav>
     </header>
 
-    <!-- Carrusel de Imágenes -->
-    <section class="carousel">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="./imagen/VEF.jpg" alt="Imagen 1">
-                <div class="overlay">
-                    <div class="container">
-                        <h1 class="title animated-text">Voces en <br> Frecuencia</h1>
-                        <h2 class="subtitle animated-text">Lenguaje Sonoro</h2>
-                    </div>
+
+    
+    <!-- CARRUSEL DE IMAGENES -->
+<section class="carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="./imagen/imagen1.jpg" alt="Imagen 1">
+            <div class="overlay">
+                <div class="container">
+                    <h1 class="title animated-text">VOCES EN <br> FRECUENCIA</h1>
+                    <h2 class="subtitle animated-text">Lenguaje Sonoro</h2>
                 </div>
             </div>
-            <div class="carousel-slide">
-                <img src="./imagen/presentacion.png" alt="Imagen 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="./imagen/imagen2.jpg" alt="Imagen 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="./imagen/imagen2.jpg" alt="Imagen 3">
+        </div>
+    </div>
+    <button class="prev-btn">&lt; Anterior</button>
+    <button class="next-btn">Siguiente &gt;</button>
+</section>
+
+
+
+
+      <!-- CARD SLIDER -->
+     <h2>CULTURA Y SOCIEDAD</h2>
+    <div class="slider-container" id="slider1">
+        <div class="card-slider"> <!-- Cambiar a 'card-slider' -->
+            <div class="card">
+                <img src="./imagen/karen-cul.jpeg " alt="karen">
+                <div class="card-content">
+                    <a href="https://podcasters.spotify.com/pod/show/karench  " class="card-button">Spotify</a>
+                    <h3 class="card-title">De Casa a la Universidad: Bitácora de un Foráneo </h3>
+                    <p class="card-description">De La Casa a la Universidad: Bitácora de un Foráneo es un podcast realizado para las y los compañeros universitarios, en especial a los que tuvieron que mudarse de ciudad, estado e incluso de país para ir a estudiar. Este podcast busca contar los pros y los contras de ser un estudiante foráneo desde diferentes experiencias y dar consejos, recomendaciones e incluso palabras de aliento para los compañeros que tienen pensado dar este gran paso.  </p>
+                </div>
             </div>
-            <div class="carousel-slide">
-                <img src="./imagen/frase.png" alt="Imagen 3">
+            <!-- Repite la estructura de la tarjeta para más tarjetas -->
+            <div class="card">
+                <img src="./imagen/mary-educ.jpg" alt="Mary">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/68fPxQQtjNg7rMakSFjUqI" class="card-button">Spotify</a>
+                    <h3 class="card-title">La Voz de los Nahuas</h3>
+                    <p class="card-description">En "La Voz de los Nahuas", nos adentramos en el universo mitológico de los Mexicas, una civilización que floreció en Mesoamérica antes de la llegada de los españoles. Cada episodio se centrará en una deidad específica, revelando su historia, simbolismo y significado en la cultura Nahua.</p>
+                </div>
             </div>
+            <div class="card">
+                <img src="./imagen/luisa-entre.png" alt="luisa">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/0u05AukAp6Ex0pOhSpvnfa?si=978acaa7fb2d4964&nd=1&dlsi=96e3e59e289f47f7" class="card-button">Spotify</a>
+                    <h3 class="card-title">Dirección al corazón </h3>
+                    <p class="card-description">Hola, bienvenido al podcast sobre la aventura de crecer, mudarse y comenzar de nuevo. A través de experiencias personales y momentos de introspección, explorar el cambio, la soledad, la nostalgia y las conexiones que nos ayudan a encontrar nuestro camino donde cada historia es una lección y cada desafío, una oportunidad para crecer.  </p>
+                </div>
+            </div>
+            <!-- Más tarjetas aquí -->
         </div>
-        <button class="prev-btn">&lt; Anterior</button>
-        <button class="next-btn">Siguiente &gt;</button>
+        <div class="arrow arrow-left" onclick="moveSlider('slider1', -1)">&#10094;</div>
+        <div class="arrow arrow-right" onclick="moveSlider('slider1', 1)">&#10095;</div>
+    </div>
+    
 
-    </section>
-
-
-
-    <!-- Sección Cultura y Sociedad -->
-    <section class="cultura-sociedad">
-        <h2>Cultura y Sociedad</h2>
-        <div class="slider-container">
-            <button class="slider-button left" onclick="slideLeft('cardSlider1')">&#10094;</button>
-            <div class="card-slider" id="cardSlider1"></div>
-            <button class="slider-button right" onclick="slideRight('cardSlider1')">&#10095;</button>
+    <h2> EDUCACION E INFORMACION</h2>
+    <div class="slider-container" id="slider2">
+        <div class="card-slider"> <!-- Cambiar a 'card-slider' -->
+            <div class="card">
+                <img src="./imagen/karol-educ.png" alt="Karol">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/0eVgmr8sMlS4YkiANmmmiF " class="card-button">Spotify</a> 
+                    <h3 class="card-title">Amor en altibajos  </h3>
+                    <p class="card-description">Explora las complejidades de las relaciones amorosas, abordando temas como las crisis, los momentos críticos y las estrategias para superar dificultades en pareja. Cada episodio ofrece consejos prácticos, reflexiones y testimonios de parejas, con el objetivo de ayudar a las personas a entender y fortalecer sus relaciones en medio de los altibajos naturales del amor.  </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/nao-act.png" alt="Naomi">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/0xufNj4GO3uNqNHgOfTBKe  " class="card-button">Spotify</a>  
+                    <h3 class="card-title"> Voces sin tabú </h3>
+                    <p class="card-description">Voces sin tabú es un podcast en el que se habla sobre relaciones y salud mental. Un espacio en el que diferentes personas nos comparten su experiencia y nos dan una reflexión que a todos no puede servir  </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/jesus.png" alt="Jesus">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/3OKQzcoRUha6NnbywVhgIl" class="card-button">Spotify</a>
+                    <h3 class="card-title">Tragedia en busca de la gloria </h3>
+                    <p class="card-description">En este podcast se contarán diversas historias trágicas ocurridas en los deportes, donde estos atletas eran o empezaban a hacer reconocidos entre el público pero, lamentablemente la vida les dio un giro inesperado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/f2-educ.jpeg" alt="f2">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/07DkpY5d4qqbCbKYpu7XEm?si=cG4ISdjnSN-3vritFSH9Lg&nd=1&dlsi=330851e4e7794c37 " class="card-button">Spotify</a>
+                    <h3 class="card-title">Renacer Propio </h3>
+                    <p class="card-description">Podcast donde se cuentan caos de crímenes que impactaron a la sociedad </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/jorge-educ.png" alt="f2">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/episode/0qZvg5AezV5g8xnQEi5SbV?si=sCleksfRSB-Vy73EL7iOCw&nd=1&dlsi=863f73a7828243c7 " class="card-button">Spotify</a>
+                    <h3 class="card-title">El mundo detrás de la puerta  </h3>
+                    <p class="card-description">Te Inspiraremos a reconocer su valor y amor propio, mostrándote que es posible salir de relaciones tóxicas y vivir una vida plena sin depender de una pareja amorosa o alguna amistad que te quita tu propio brillo. </p>
+                </div>
+            </div>
+            <!-- Más tarjetas aquí -->
         </div>
-    </section>
+        <div class="arrow arrow-left" onclick="moveSlider('slider2', -1)">&#10094;</div>
+        <div class="arrow arrow-right" onclick="moveSlider('slider2', 1)">&#10095;</div>
+    </div>
+    
 
-    <!-- Sección Educación e Información -->
-    <section class="educacion-informacion">
-        <h2>Educación e Información</h2>
-        <div class="slider-container">
-            <button class="slider-button left" onclick="slideLeft('cardSlider2')">&#10094;</button>
-            <div class="card-slider" id="cardSlider2"></div>
-            <button class="slider-button right" onclick="slideRight('cardSlider2')">&#10095;</button>
+    <h2>ENTRETENIMIENTO Y ARTE</h2>
+    <div class="slider-container" id="slider3">
+        <div class="card-slider"> <!-- Cambiar a 'card-slider' -->
+            <div class="card">
+                <img src="./imagen/val-entre.png" alt="Valeria">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/1TvtDQnMou1Eu11mEbAsAi?si=TahFPCCRRA6UPVHBjmOxsQ&nd=1&dlsi=755f7de4f5cf42e4 " class="card-button">Spotify</a>
+                    <h3 class="card-title">Revelando Generos </h3>
+                    <p class="card-description">Revelando Géneros es un espacio que busca ampliar el panorama musical del público, al aprender sobre los orígenes, un poco de historia, exponentes e instrumentos de algunos géneros musicales, junto a ello recordar o dar a conocer bandas, artistas y canciones que enriquezcan culturalmente a los oyentes. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/joso-entre.png" alt="Joso">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/4xc1mEsF5AShTYwvMM9HOh?si=SJvoEgjfQW2OQmQIf2OWow&nd=1&dlsi=9b55689357d94b4e " class="card-button">Spotify</a>
+                    <h3 class="card-title">Telarañas Universales  </h3>
+                    <p class="card-description">Hola, sean bienvenidos a este su programa Telarañas Universales, este espacio es dedicado a compartir con ustedes las diferentes variantes de Spider-man a través del multiverso  </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/juan-entre.png" alt="Juan">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/0xufNj4GO3uNqNHgOfTBKe  " class="card-button">Spotify</a>
+                    <h3 class="card-title">Ecos de la melancolía  </h3>
+                    <p class="card-description">Ecos de la melancolía es un podcast un espacio para dar a conocer más a detalle música rock, indie, entre muchas otras dando a conocer un poco mas sobre los artistas y la letra de sus canciones                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/andy-entre.png" alt="Andy">
+                <div class="card-content">
+                    <a href=" https://open.spotify.com/show/555w6L0KtvuHwAUoVrahMl?si=GRZQMvFxQUCEPXhIGsSPog&nd=1&dlsi=d1cb95390248451d " class="card-button">Spotify</a>
+                    <h3 class="card-title">Anomalia 37 </h3>
+                    <p class="card-description">Anomalía 37 nos lleva a un universo postapocalíptico donde una niña de 12 años, superdotada y con una condición que la obliga a usar audífonos, percibe fenómenos que otros ignoran. En su lucha por sobrevivir, encuentra a Edwin y juntos enfrentan criaturas peligrosas y el oscuro origen de un virus que amenaza múltiples realidades </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/fabi-entre.png" alt="Fabi">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/1MxuLf5uxQG7xw57TP49kw " class="card-button">Spotify</a>
+                    <h3 class="card-title">Líricamente irreverente </h3>
+                    <p class="card-description">Líricamente irreverente es un podcast donde presentamos música con temática de crítica social y como con estas canciones han sido un mensaje de consciencia para la sociedad. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/isma-entre.png" alt="Isma">
+                <div class="card-content">
+                    <a href=" https://open.spotify.com/show/0mRMFFXCGBEatBbebSiUn9?si=fwPj9SnuS6ut6me_MzErRg&nd=1&dlsi=333f5c9dc5324634 " class="card-button">Spotify</a>
+                    <h3 class="card-title">La cueva del pequeñín </h3>
+                    <p class="card-description">Es un podcast donde se cuenta las historias más aterradoras sobre duendes, gnomos y hermitaños, historia que te harán sudar de miedo, que no te dejarán dormir por las noches e historia muy fuera de esta mundo. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/lalo-entre.jpeg" alt="Lalo">
+                <div class="card-content">
+                    <a href=" https://open.spotify.com/show/1uLKRdV3mBUXWfFIxQ08XD?si=61Ji97VyR96bxtMxvyu8JQ&nd=1&dlsi=a554ab1d81884e58 " class="card-button">Spotify</a>
+                    <h3 class="card-title">La vida con Lalo </h3>
+                    <p class="card-description">Un podcast de anécdotas con humor negro, que refleja que hasta en las peores de las circunstancias puedes ver lo gracioso en la vida, con una dinámica de distintos anfitriones para hablar de temas en específico </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/sebas-entre.png" alt="Sebas">
+                <div class="card-content">
+                    <a href=" https://open.spotify.com/show/5Ft8rrlZqDvHCm7PXi8HlI?si=j_ybnTUzThSZTuS9HcK6tQ " class="card-button">Spotify</a>
+                    <h3 class="card-title">"¿Qué ver si...?" </h3>
+                    <p class="card-description">Un programa donde recomendamos peliculas según la tematica con un invitado. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/f3-entre.jpeg" alt="F3">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/5NEDiI7LHDT5AUAvy8L01o " class="card-button">Spotify</a>
+                    <h3 class="card-title">Ecos del Cosmo </h3>
+                    <p class="card-description">Un podcast donde exploramos los misterios del cosmos y buscamos una explicación a lo ocurrido en la astrología y cual es el impacto en nuestras vidas. Estrellas , destino, camino. </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/eunice.jpg" alt="Eunice">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/044Emz2Nyn60PUJNNw4mza" class="card-button">Spotify</a>
+                    <h3 class="card-title">El Susurro de la Oscuridad</h3>
+                    <p class="card-description">Relatos y experiencias paranormales. ¿Estás listo para escuchar lo que otros no se atreven a contar? </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/yara.jpeg" alt="Yara">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/6ebvMiFKYpXzCDOw0IQ2Y3 " class="card-button">Spotify</a>
+                    <h3 class="card-title">Envinado: el anecdotario </h3>
+                    <p class="card-description">En este espacio creado para ti, amante de la fiesta y aferrado a las malas deciciones, te sentiras identificado con alguna anecdota de peda... </p>
+                </div>
+            </div>
+            <!-- Más tarjetas aquí -->
         </div>
-    </section>
+        <div class="arrow arrow-left" onclick="moveSlider('slider3', -1)">&#10094;</div>
+        <div class="arrow arrow-right" onclick="moveSlider('slider3', 1)">&#10095;</div>
+    </div>
 
-    <!-- Sección Entretenimiento y Arte -->
-    <section class="entretenimiento-arte">
-        <h2>Entretenimiento y Arte</h2>
-        <div class="slider-container">
-            <button class="slider-button left" onclick="slideLeft('cardSlider3')">&#10094;</button>
-            <div class="card-slider" id="cardSlider3"></div>
-            <button class="slider-button right" onclick="slideRight('cardSlider3')">&#10095;</button>
+
+    <h2>ENTREVISTAS Y TESTIMONIOS</h2>
+    <div class="slider-container" id="slider4">
+        <div class="card-slider"> <!-- Cambiar a 'card-slider' -->
+            <div class="card">
+                <img src="./imagen/dani-tes.png" alt="Dani">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/2k0EFp5r5XJKBn22tTp719?si=GRNXnpNGRDCNMiiaBrh3sw&nd=1&dlsi=702c1bdf8a264759  " class="card-button">Spotify</a>
+                    <h3 class="card-title">Depportando </h3>
+                    <p class="card-description">"Hola a depportando" es un podcast que celebra las vidas y logros de deportistas mexicanos. A través de relatos íntimos y entrevistas, se exploran sus trayectorias, desafíos y triunfos, revelando la pasión que los impulsa. Desde figuras icónicas hasta talentos emergentes, cada episodio invita a inspirarse en sus experiencias y a conocer el lado humano del deporte en México.  </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/diana-tes.png" alt="Diana">
+                <div class="card-content">
+                    <a href="https://podcasters.spotify.com/pod/show/voces-del-mundo " class="card-button">Spotify</a>
+                    <h3 class="card-title">Voces Del Mundo</h3>
+                    <p class="card-description">En “voces del mundo” conoceremos la vida de los estudiantes foráneos, donde descubriremos sus experiencias personales, ofreciendo consejos útiles para futuros estudiantes, y fomentar el intercambio cultural. Y motivar a las personas a estudiar en Puebla.  </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/josh-tes.png" alt="Josh">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/5UtJCKBHQahFMdCZH2l6n2?si=dAWjC6tPSq-qyi3nHQiMtg&nd=1&dlsi=f0e56277dc78465c " class="card-button">Spotify</a>
+                    <h3 class="card-title">Lejos de casa</h3>
+                    <p class="card-description">Un podcast donde podremos escuchar a los foraneos y personas que han salido de su hogar en busqueda de sus sueños y metas, contandonos asi sus experiencias </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/f1-tes.jpeg" alt="F1">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/34CFI6oWqNlYDfa9yb0G95 " class="card-button">Spotify</a>
+                    <h3 class="card-title">Zona de juego</h3>
+                    <p class="card-description">Explora lo mejor del futbol en un solo lugar. Análisis de los partidos, historias detrás de los jugadores y debates sobre las figuras más destacadas del deporte. Únete cada semana para vivir la pasión del futbol sin limites. </p>
+                </div>
+            </div>
+            <!-- Más tarjetas aquí -->
         </div>
-    </section>
+        <div class="arrow arrow-left" onclick="moveSlider('slider4', -1)">&#10094;</div>
+        <div class="arrow arrow-right" onclick="moveSlider('slider4', 1)">&#10095;</div>
+    </div>
+    
 
-    <!-- Sección Entrevistas y Testimonios -->
-    <section class="entrevistas-testimonios">
-        <h2>Entrevistas y Testimonios</h2>
-        <div class="slider-container">
-            <button class="slider-button left" onclick="slideLeft('cardSlider4')">&#10094;</button>
-            <div class="card-slider" id="cardSlider4"></div>
-            <button class="slider-button right" onclick="slideRight('cardSlider4')">&#10095;</button>
+    <h2>ACTUALIDAD</h2>
+    <div class="slider-container" id="slider5">
+        <div class="card-slider"> <!-- Cambiar a 'card-slider' -->
+            <div class="card">
+                <img src="./imagen/aylen-act.png" alt="Aylen">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/show/7fuDx2cE9I4B11MjB4kCOP  " class="card-button">Spotify</a>
+                    <h3 class="card-title">Carreteras En Alerta</h3>
+                    <p class="card-description">Tu podcast, "Carreteras En Alerta", explora la violencia y el crimen en las rutas de México. A través de testimonios e investigaciones, revela los riesgos que enfrentan conductores y transportistas, abordando temas de crimen organizado y zonas peligrosas, para crear conciencia social.  </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagen/jovani-act.jpeg" alt="Jovani">
+                <div class="card-content">
+                    <a href="https://open.spotify.com/episode/27qtFnVdzbcnzxmTjeE36Y?si=3hjMxgHaSpuoytWMqDngzw&nd=1&dlsi=9769894cf94f461f " class="card-button">Spotify</a>
+                    <h3 class="card-title">La tecnología en la educación </h3>
+                    <p class="card-description">Avance acerca de la tecnología en la educación lo que debes saber acerca de como la tecnología transforme la educación desde metodologías hasta la innovación. </p>
+                </div>
+            </div>
+            <!--<div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen 6">
+                <div class="card-content">
+                    <button class="card-button">Botón 6</button>
+                    <h3 class="card-title">Título 6</h3>
+                    <p class="card-description">Descripción de la tarjeta 6.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen 6">
+                <div class="card-content">
+                    <button class="card-button">Botón 6</button>
+                    <h3 class="card-title">Título 6</h3>
+                    <p class="card-description">Descripción de la tarjeta 6.</p>
+                </div>
+            </div>
+             Más tarjetas aquí -->
         </div>
-    </section>
+        <div class="arrow arrow-left" onclick="moveSlider('slider5', -1)">&#10094;</div>
+        <div class="arrow arrow-right" onclick="moveSlider('slider5', 1)">&#10095;</div>
+    </div>
 
-    <!-- Sección Actualidad -->
-    <section class="actualidad">
-        <h2>Actualidad</h2>
-        <div class="slider-container">
-            <button class="slider-button left" onclick="slideLeft('cardSlider5')">&#10094;</button>
-            <div class="card-slider" id="cardSlider5"></div>
-            <button class="slider-button right" onclick="slideRight('cardSlider5')">&#10095;</button>
-        </div>
-    </section>
 
-    <!-- Frase -->
+    <!-- FRASE -->
     <section class="frase">
         <p>"EL PODER DE LA VOCES PUEDE CAMBIAR EL MUNDO, UNA HISTORIA A LA VEZ"</p>
     </section>
 
-    <!-- Pie de Página -->
+
+    <!-- PIE DE PAGINA -->
     <footer>
         <div class="footer-container">
             <div class="contact-box">
@@ -150,9 +369,7 @@
         </div>
     </footer>
 
+
     <script src="script.js"></script>
-
-
 </body>
-
 </html>

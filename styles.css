@@ -3,15 +3,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-}
-
-/* Cabecera */
-header {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  
+  /* Cabecera */
+  header {
     position: fixed;
     top: 10px;
     width: 100%;
@@ -26,90 +29,101 @@ header {
     align-items: center;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
-}
-
-.navbar {
+  }
+  
+  .navbar {
     display: flex; /* Aseguramos que el contenedor de la navbar sea flexible */
     justify-content: flex-end;  /* Alineamos los elementos de la navbar a la derecha 
     width: 100%; /* Ocupa todo el ancho disponible */
-}
-
-.nav-list {
+  }
+  
+  .nav-list {
     list-style: none;
     display: flex;
     gap: 15px; /* Espacio entre los elementos de la lista */
-}
-
-.nav-list a {
+  }
+  
+  .nav-list a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px; /* Aumentar padding para más espacio */
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.2s; /* Agregar transición de transformación */
-}
-
-.nav-list a:hover {
+  }
+  
+  .nav-list a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.05); /* Efecto de aumento en hover */
-}
-
-/* pantalla de celular */
-.menu-toggle {
+  }
+  
+  /* pantalla de celular */
+  .menu-toggle {
     display: none; /* Ocultar el botón en pantallas grandes */
     flex-direction: column;
     cursor: pointer;
-}
-
-.bar {
+  }
+  
+  .bar {
     height: 3px;
     width: 25px;
     background-color: white;
     margin: 3px 0;
-}
-
-
-
-/* Carrusel */
-.carousel {
+  }
+  
+  
+  
+  
+  /* Carrusel */
+  .carousel {
     position: relative;
-    width: 100%; /* Ancho total */
-    height: 600px; /* Altura del carrusel */
-    margin: 0 auto; /* Espacio a los costados */
-    overflow: hidden; /* Evitar el desbordamiento */
-}
-
-.container {
-    text-align: left; /* Alineación a la izquierda */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrado vertical */
-    gap: 20px; /* Espacio entre los textos */
-}
-
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Transición suave */
-}
-
-.carousel-slide {
-    display: none; /* Oculta todos los slides por defecto */
-    min-width: 100%; /* Cada slide ocupa el 100% del ancho */
-    position: relative;
-}
-
-.carousel-slide.active {
-    display: block; /* Muestra el slide activo */
-}
-
-.carousel-slide img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajustar la imagen */
-}
-
-/* Estilo para los botones de navegación */
-.prev-btn, .next-btn {
+    height: 400px; /* Altura mantenida en 400px */
+    overflow: hidden;
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Asegúrate de que cubra completamente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para mejor visibilidad */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+  }
+  
+  /* Contenedor del texto */
+  .container {
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex;
+    flex-direction: column; /* Coloca el texto en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    height: 100%; /* Ocupa toda la altura disponible */
+  }
+  
+  /* Título y subtítulo */
+  .title {
+    font-family: 'Roboto Slab', serif;
+    color: #fff; /* Color del texto */
+    font-size: 2.5em; /* Tamaño de letra del título */
+    margin: 0; /* Elimina margen por defecto */
+    padding: 0; /* Elimina padding por defecto */
+  }
+  
+  .subtitle {
+    font-family: 'Roboto Slab', serif; /* Mismo tipo de letra */
+    color: #fff; /* Color del texto */
+    font-size: 1.2em; /* Tamaño de letra del subtítulo */
+    margin: 0; /* Elimina margen por defecto */
+    padding: 0; /* Elimina padding por defecto */
+  }
+  
+  /* Estilo para los botones de navegación */
+  .prev-btn, .next-btn {
     position: absolute;
     top: 50%; /* Centrado vertical */
     transform: translateY(-50%); /* Ajuste del centrado vertical */
@@ -120,45 +134,24 @@ header {
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
     z-index: 10; /* Asegura que estén por encima de las imágenes */
     border-radius: 5px; /* Esquinas redondeadas */
-}
-
-.prev-btn {
+  }
+  
+  .prev-btn {
     left: 20px; /* Alineado a la izquierda */
-}
-
-.next-btn {
+  }
+  
+  .next-btn {
     right: 20px; /* Alineado a la derecha */
-}
-
-/* Estilo del texto */
-.title {
-    font-family: 'Roboto Slab', serif; /* Fuente personalizada */
-    opacity: 0; /* Inicialmente invisible */
-    font-size: 4em;
-    font-weight: bold;
-    margin-bottom: 5px;
-    animation: fadeIn 2s forwards;
-    text-align: left;
-    color: #fff;
-}
-
-.subtitle {
-    font-size: 1.5em;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
-    text-align: left;
-    color: #fff;
-}
-
-/* Animación del texto */
-.animated-text {
+  }
+  
+  /* Animaciones */
+  .animated-text {
     opacity: 0;
     transform: translateX(-50px);
     animation: textFadeInOut 8s infinite;
-    margin-left: 20px; /* Margen izquierdo adicional */
-}
-
-@keyframes textFadeInOut {
+  }
+  
+  @keyframes textFadeInOut {
     0%, 20% {
         opacity: 0;
         transform: translateX(-50px);
@@ -171,73 +164,65 @@ header {
         opacity: 0;
         transform: translateX(50px);
     }
-}
-
-/* Overlay */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-translúcido */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* Estilo para los títulos de las secciones */
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    padding: 40px;
-    text-align: left; 
-}
-
-
-/* Card Slider */
-.slider-container {
+  }
+  
+  /* Esconder los slides no activos */
+  .carousel-slide {
+    display: none; /* Oculta los slides por defecto */
+  }
+  
+  .carousel-slide.active {
+    display: block; /* Solo muestra el slide activo */
+  }
+  
+  .carousel-slide img {
+      width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+      height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+      object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  }
+  
+  
+  
+  /* Estilos generales del CARD SLIDER y tarjetas */
+  .slider-container {
     position: relative;
     width: 80%;
-    overflow: visible; /* Permitir visibilidad fuera del área */
+    overflow: hidden; /* Asegúrate de que no haya desbordamiento */
     margin: 20px auto;
-}
-
-/* Ajustes de la tarjeta individual */
-.card-slider {
+  }
+  
+  .card-slider {
     display: flex;
     transition: transform 0.5s ease;
     gap: 15px; /* Espacio entre tarjetas */
-}
-
-.card {
-    position: relative; /* Necesario para el posicionamiento absoluto del botón*/ 
+  }
+  
+  .card {
+    position: relative; 
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden; 
     width: 300px;
     min-width: 300px; /* Ancho mínimo consistente */
-    flex: 0 0 auto; /* Evita que las tarjetas se estiren */
+    flex: 0 0 auto; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease;
-}
-
-.card img {
+  }
+  
+  .card img {
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0 0;
-    width: 300px; /* Ancho fijo */
     height: 200px; /* Alto fijo */
-    object-fit: cover; /* Mantiene la relación de aspecto */
-}
-
-/* Estilos para el botón en la tarjeta */
-.card-button {
+    object-fit: cover; 
+  }
+  
+  /* Estilos para el botón en la tarjeta */
+  .card-button {
     position: absolute;
     bottom: 10px; /* Ajusta la posición desde la parte inferior */
     left: 50%; 
@@ -254,66 +239,72 @@ h2 {
     text-decoration: none;
     font-size: 0.9em;
     transition: background-color 0.3s;
-}
-
-.card-content {
+  }
+  
+  .card-content {
     padding: 20px;
-    margin-bottom: 60px;   /*Asegúrate de que haya espacio para el botón */
-}
-
-.card-title {
+    margin-bottom: 60px;  
+  }
+  
+  .card-title {
     font-size: 1.2em;
     color: #333;
     margin: 10px 0;
-}
-
-.card-description {
+  }
+  
+  .card-description {
     font-size: 0.9em;
     color: #555;
     margin-bottom: 15px;
-}
-
-.card-container {
-    margin-bottom: 20px; /* Espacio entre la última tarjeta y el contenedor */
-}
-
-
-/* Flechas de navegación */
-.slider-button {
+  }
+  
+  .card-container {
+    margin-bottom: 20px; 
+  }
+  
+  .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
-    font-size: 2em;
-    padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
-    z-index: 10; /* Asegúrate de que el z-index sea mayor */
-}
-
-.slider-button.left {
-    left: -40px; 
-}
-
-.slider-button.right {
-    right: -40px;
-}
-
-
-/* Frase */
-.frase {
+    z-index: 10; 
+  }
+  
+  .arrow-left {
+    left: 10px; 
+  }
+  
+  .arrow-right {
+    right: 10px; 
+  }
+  
+  h2 {
+    font-family: 'Arial', sans-serif; /* Cambia por la fuente que te guste */
+    color: white; /* Color blanco */
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Espacio superior e inferior */
+    /* o para espacio a la izquierda:
+    margin-left: 20px; 
+    margin-top: 20px;
+    */
+  }
+  
+  
+  /* FRASE */
+  .frase {
     text-align: center; /* Centrar la frase */
     font-size: 2.5em; /* Tamaño de la fuente más grande */
     color: #fff; /* Color del texto */
     margin: 20px 0; /* Espaciado arriba y abajo */
     background-color: #105236; /* Color de fondo gris */
     padding: 20px; /* Espaciado interno */
-}
-
-/* Pie de página */
-footer {
+  }
+  
+  
+  /* PIE DE PAGINA, CONTACTO*/
+  footer {
     background: url('./imagen/ppag.jpg') no-repeat center center; /* Asegúrate de que la ruta de la imagen sea correcta */
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     color: white; /* Color de texto */
@@ -321,11 +312,11 @@ footer {
     font-family: 'Arial', sans-serif; /* Fuente general */
     text-align: center; /* Centrar el texto */
     position: relative; /* Para que los elementos se posicionen correctamente */
-}
-
-
-/* Caja de contacto */
-.contact-box {
+  }
+  
+  
+  /* Caja de contacto */
+  .contact-box {
     display: flex; /* Usar flexbox */
     flex-direction: column; /* Dirección de los elementos en columna */
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
@@ -336,45 +327,45 @@ footer {
     margin: 0 auto; /* Centrando la caja */
     text-align: left; /* Texto alineado a la izquierda */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */ 
-}
-
-/* Estilo para las columnas */
-.contact-columns {
+  }
+  
+  /* Estilo para las columnas */
+  .contact-columns {
     display: flex; /* Usa flexbox para las columnas */
     justify-content: space-between; /* Espacio entre columnas */
     margin-top: 20px; /* Espaciado superior */
-}
-
-/* Cada columna ocupa el mismo espacio */
-.column {
+  }
+  
+  /* Cada columna ocupa el mismo espacio */
+  .column {
     flex: 1; /* Espacio igual entre columnas */
     text-align: center; /* Centrar el texto dentro de cada columna */
-}
-
-/* Estilo para la caja del botón y checkbox */
-.checkbox-container {
+  }
+  
+  /* Estilo para la caja del botón y checkbox */
+  .checkbox-container {
     display: flex; /* Usar flexbox */
     align-items: center; /* Alinear verticalmente en el centro */
     justify-content: space-between; /* Espacio entre los elementos */
     margin-bottom: 20px; /* Espacio inferior */
-}
-
-
-/* Ajustar el botón al pasar el mouse */
-.register-btn:hover {
+  }
+  
+  
+  /* Ajustar el botón al pasar el mouse */
+  .register-btn:hover {
     background-color: #17a54a; /* Color más oscuro al pasar el mouse */
-}
-
-
-/* Ajustes para los botones en la parte inferior */
-.footer-buttons {
+  }
+  
+  
+  /* Ajustes para los botones en la parte inferior */
+  .footer-buttons {
     display: flex; /* Usar flexbox para los botones */
     justify-content: flex-start; /* Alinear a la izquierda */
     margin-top: 20px; /* Espaciado superior */
-}
-
-/* Ajustar el tamaño de los botones */
-.footer-button {
+  }
+  
+  /* Ajustar el tamaño de los botones */
+  .footer-button {
     background-color: #1DB954; /* Color de fondo verde */
     color: white; /* Color de texto blanco */
     border: none; /* Sin borde */
@@ -383,45 +374,45 @@ footer {
     margin-right: 10px; /* Espaciado entre botones */
     cursor: pointer; /* Cambiar cursor */
     font-size: 0.8em; /* Tamaño de fuente */
-}
-
-.footer-button:hover {
+  }
+  
+  .footer-button:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
-}
-
-
-/* Encabezado dentro de la caja de contacto */
-.contact-box h3 {
+  }
+  
+  
+  /* Encabezado dentro de la caja de contacto */
+  .contact-box h3 {
     font-family: 'Helvetica', sans-serif; /* Cambiar fuente del encabezado */
     font-size: 1.8em; /* Tamaño de fuente */
     margin-bottom: 10px; /* Espacio inferior */
     text-align: center; /* Centrar el encabezado */
-}
-
-/* Estilo de enlaces */
-.contact-box a {
+  }
+  
+  /* Estilo de enlaces */
+  .contact-box a {
     color: #1DB954; /* Color verde similar al de Spotify */
     text-decoration: none; /* Sin subrayado */
     font-weight: bold; /* Texto en negrita */
-}
-
-.contact-box a:hover {
+  }
+  
+  .contact-box a:hover {
     text-decoration: underline; /* Subrayar al pasar el mouse */
-}
-
-/* Estilos para el texto de entrada */
-.contact-box input[type="email"] {
+  }
+  
+  /* Estilos para el texto de entrada */
+  .contact-box input[type="email"] {
     width: calc(100% - 20px); /* Ancho completo menos espacio */
     padding: 10px; /* Espaciado interno */
     margin-bottom: 10px; /* Espacio inferior */
     border: 1px solid #ccc; /* Borde gris */
     border-radius: 5px; /* Bordes redondeados */
     font-size: 1em; /* Tamaño de fuente */
-}
-
-/* Estilo del botón de registro */
-.register-btn {
+  }
+  
+  /* Estilo del botón de registro */
+  .register-btn {
     background-color: #1DB954; /* Color de fondo verde */
     color: white; /* Color de texto blanco */
     border: none; /* Sin borde */
@@ -431,207 +422,181 @@ footer {
     font-size: 1em; /* Tamaño de fuente */
     transition: background-color 0.3s; /* Transición suave */
     float: right; /* Mover el botón a la derecha */
-}
-
-
-.register-btn:hover {
+  }
+  
+  
+  .register-btn:hover {
     background-color: #17a54a; /* Color más oscuro al pasar el mouse */
-}
-
-/* Alinear el copyright a la derecha */
-.footer-credits {
+  }
+  
+  /* Alinear el copyright a la derecha */
+  .footer-credits {
     text-align: right; /* Alinear el texto a la derecha */
     margin-top: 10px; /* Espacio superior */
-}
-
-/* Encabezado */
-@media (max-width: 768px) {
-    .nav-list {
-        display: none; /* Ocultar la lista por defecto en móviles */
-        flex-direction: column; /* Colocar los elementos uno debajo del otro */
-        width: 100%; /* Ocupa todo el ancho */
-        position: absolute;
-        top: 60px; /* Justo debajo del encabezado */
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.9);
-        border-radius: 0 0 12px 12px; /* Esquinas redondeadas */
-        padding: 10px 0;
-    }
-
-    .nav-list.active {
-        display: flex; /* Mostrar la lista al hacer clic en el menú */
-    }
-
-    .menu-toggle {
-        display: flex; /* Mostrar el botón en pantallas pequeñas */
-    }
-
-    .nav-list a {
-        padding: 15px 20px; /* Ajustar el padding para más espacio en móviles */
-    }
-}
-
-
-
-
-/* Carrusel */
-@media (max-width: 768px) {
-    .carousel {
-        height: 300px; /* Altura ajustada para dispositivos móviles */
-    }
-
-    .title {
-        font-size: 2em; /* Tamaño de fuente reducido para la clase .title */
-        margin-left: 10px; /* Reduce el margen izquierdo */
-    }
-
-    .subtitle {
-        font-size: 1em; /* Tamaño de fuente reducido para la clase .subtitle */
-        margin-left: 10px; /* Reduce el margen izquierdo */
-    }
-
-    .carousel-slide img {
-        height: 300px; /* Ajustar altura de imagen en dispositivos móviles */
-        object-fit: cover; /* Asegurar que la imagen cubra el contenedor */
-    }
-
-    .prev-btn, .next-btn {
-        padding: 8px 12px; /* Ajusta el tamaño del botón para dispositivos móviles */
-        font-size: 12px; /* Tamaño de fuente reducido para los botones */
-    }
-
-    .overlay {
-        padding: 10px; /* Agrega un poco de padding en la superposición para dispositivos móviles */
-    }
-
-    /* Ajusta el tamaño de los botones en pantallas más pequeñas */
-    .prev-btn {
-        left: 10px; /* Mueve el botón más cerca del borde */
-    }
-
-    .next-btn {
-        right: 10px; /* Mueve el botón más cerca del borde */
-    }
-
-    .prev-btn, .next-btn {
-        font-size: 0; /* Hace que el texto sea invisible */
-        width: 40px; /* Ajusta el tamaño de los botones si es necesario */
-        height: 40px; /* Ajusta el tamaño de los botones si es necesario */
-        padding: 0; /* Elimina el padding para que no afecte el tamaño */
-    }
-
-    /* Muestra solo la flecha */
-    .prev-btn::after {
-        content: '<'; /* Flecha anterior */
-        font-size: 24px; /* Ajusta el tamaño de la flecha */
-        color: #fff; /* Cambia el color de la flecha */
-    }
-
-    .next-btn::after {
-        content: '>'; /* Flecha siguiente */
-        font-size: 24px; /* Ajusta el tamaño de la flecha */
-        color: #fff; /* Cambia el color de la flecha */
-    }
-}
-
-
-
-/* card slider */
-@media (max-width: 768px) {
-    /* Contenedor del slider para mostrar solo una tarjeta a la vez */
-    .card-slider {
-        overflow: hidden; /* Oculta las tarjetas adicionales */
-        display: flex;
-        transform: translateX(0); /* Asegura que comience en la primera tarjeta */
-    }
-
-    .card {
-        min-width: 100%; /* Ocupa el 100% del contenedor */
-        width: 100%;
-        flex: 0 0 100%; /* Cada tarjeta ocupa todo el ancho del contenedor */
-    }
-
-    /* Ajustes para los botones de navegación */
-    .slider-button.left {
-        left: 5px; /* Asegura que los botones estén visibles en pantallas pequeñas */
-    }
-
-    .slider-button.right {
-        right: 5px;
-    }
-    
-    .slider-button {
-        font-size: 1.5em; /* Tamaño de fuente reducido para botones en móviles */
-    }
-
-    /* topicos */
-    h2 {
-        font-size: 1.5em;
-    }
-}
-
-@media (max-width: 768px) {
-    .frase {
-        font-size: 1em; /* Adjust font size for mobile */
-    }
-} /* Cierre de la clase .card */
-
-
-/* Contacto */
-@media (max-width: 768px) { /* Modificaciones para dispositivos móviles */
-    
+  }
+  
+  
+  
+  
+  /* Media Queries para Responsividad */
+  @media (max-width: 768px) {
+  
+    /* ENCABEZADO */
+  .nav-list {
+      display: none; /* Ocultar la lista por defecto en móviles */
+      flex-direction: column; /* Colocar los elementos uno debajo del otro */
+      width: 100%; /* Ocupa todo el ancho */
+      position: absolute;
+      top: 60px; /* Justo debajo del encabezado */
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      border-radius: 0 0 12px 12px; /* Esquinas redondeadas */
+      padding: 10px 0;
+  }
+  
+  .nav-list.active {
+      display: flex; /* Mostrar la lista al hacer clic en el menú */
+  }
+  
+  .menu-toggle {
+      display: flex; /* Mostrar el botón en pantallas pequeñas */
+  }
+  
+  .nav-list a {
+      padding: 15px 20px; /* Ajustar el padding para más espacio en móviles */
+  }
+  
+  
+  /* CARRUSEL */
+  .carousel {
+    height: 300px; /* Altura ajustada para dispositivos móviles */
+  }
+  
+  .title {
+    font-size: 2em; /* Tamaño de fuente reducido para la clase .title */
+    margin-left: 10px; /* Reduce el margen izquierdo */
+  }
+  
+  .subtitle {
+    font-size: 1em; /* Tamaño de fuente reducido para la clase .subtitle */
+    margin-left: 10px; /* Reduce el margen izquierdo */
+  }
+  
+  .carousel-slide img {
+    height: 300px; /* Ajustar altura de imagen en dispositivos móviles */
+    object-fit: cover; /* Asegurar que la imagen cubra el contenedor */
+  }
+  
+  .prev-btn, .next-btn {
+    padding: 8px 12px; /* Ajusta el tamaño del botón para dispositivos móviles */
+    font-size: 12px; /* Tamaño de fuente reducido para los botones */
+  }
+  
+  .overlay {
+    padding: 10px; /* Agrega un poco de padding en la superposición para dispositivos móviles */
+  }
+  
+  /* Ajusta el tamaño de los botones en pantallas más pequeñas */
+  .prev-btn {
+    left: 10px; /* Mueve el botón más cerca del borde */
+  }
+  
+  .next-btn {
+    right: 10px; /* Mueve el botón más cerca del borde */
+  }
+  
+  .prev-btn, .next-btn {
+    font-size: 0; /* Hace que el texto sea invisible */
+    width: 40px; /* Ajusta el tamaño de los botones si es necesario */
+    height: 40px; /* Ajusta el tamaño de los botones si es necesario */
+    padding: 0; /* Elimina el padding para que no afecte el tamaño */
+  }
+  
+  /* Muestra solo la flecha */
+  .prev-btn::after {
+    content: '<'; /* Flecha anterior */
+    font-size: 24px; /* Ajusta el tamaño de la flecha */
+    color: #fff; /* Cambia el color de la flecha */
+  }
+  
+  .next-btn::after {
+    content: '>'; /* Flecha siguiente */
+    font-size: 24px; /* Ajusta el tamaño de la flecha */
+    color: #fff; /* Cambia el color de la flecha */
+  }
+  
+  
+  /* CARD SLIDER */
+  .slider-container {
+    width: 95%; /* Ajustar el ancho en móviles */
+    padding: 10px; /* Espaciado adicional en móvil */
+  }
+  
+  .card {
+  width: 90%; /* Ancho ajustado para móviles */
+  margin: 0 auto; /* Centrar tarjetas */
+  }
+  
+  .card-button {
+  width: 50%; /* Botón ocupa todo el ancho disponible */
+  }
+  
+  .card-title, .card-description {
+  font-size: 1em; /* Reducir tamaño de texto en móviles */
+  }
+  
+  
+  /* FRASE */
+  .frase {
+    font-size: 1em; /* Adjust font size for mobile */
+  }
+  
+  
+  /* PIE DE PAGINA, CONTACTO */
+  @media (max-width: 768px) { /* Modificaciones para dispositivos móviles */
+      
     .contact-box {
         padding: 20px; /* Reduce el espaciado interno */
     }
-
+  
     .contact-columns {
         flex-direction: column; /* Cambia a columnas en lugar de filas */
     }
-
+  
     .column {
         flex: 100%; /* Cada columna ocupa el 100% en pantallas pequeñas */
         margin-bottom: 10px; /* Espacio entre columnas */
     }
-
+  
     .footer-buttons {
         flex-direction: column; /* Cambia a columna para los botones */
         align-items: center; /* Centra los botones */
     }
-
+  
     .footer-button {
         margin-right: 0; /* Elimina margen derecho en botones */
         margin-bottom: 10px; /* Agrega espacio entre botones */
         font-size: 1em; /* Aumenta el tamaño de fuente para mejorar la legibilidad */
     }
-
+  
     .register-btn {
-        width: 100%; /* Botón ocupa el 100% del ancho */
+        width: 50%; /* Botón ocupa el 100% del ancho */
         margin-top: 10px; /* Agrega espacio superior al botón */
     }
-
+  
     .footer-credits {
         text-align: center; /* Centra el texto de copyright */
     }
-
+  
     .contact-box h3 {
         font-size: 1.5em; /* Reduce el tamaño de la fuente del encabezado */
     }
-
+  
     .contact-box input[type="email"] {
         font-size: 0.9em; /* Ajusta el tamaño de la fuente */
     }
-}
-
-
-
-@media (max-width: 480px) {
-
-    .button {
-        padding: 8px 16px; /* Ajusta el tamaño del botón */
-        font-size: 12px; /* Ajusta el tamaño de la fuente */
-    }
-}
-
-
-
-    
+  }
+  
+  }
+  
+  
